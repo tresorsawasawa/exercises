@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Python documentation page</header>
+        <ul>
+            <li><a class="nav-link" href="#Whetting_Your_Appetite">whetting Your Appetite</a></li>
+            <li><a class="nav-link" href="#An_Informal_Introdution">An Informal Introdution</a></li>
+            <li><a class="nav-link" href="#Numbers">Numbers</a></li>
+            <li><a class="nav-link" href="#Strings">Strings</a></li>
+            <li><a class="nav-link" href="#Lists">Lists</a></li>
+            <li><a class="nav-link" href="#Tuples">Tuples</a></li>
+            <li><a class="nav-link" href="#Dictionary">Dictionary</a></li>
+            <li><a class="nav-link" href="#if_Statements">if Statements</a></li>
+            <li><a class="nav-link" href="#for_Statements">for Statements</a></li>
+            <li><a class="nav-link" href="#The_range()_Function">The range() Function</a></li>
+            <li><a class="nav-link" href="#Defining_Functions">Defining Functions</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Whetting_Your_Appetite">
+            <header>Whetting Your Appetite</header>
+            <article>
+                <p>
+                    Python is an easy to learn, powerful programming language. It has efficient high-level data structures 
+                    and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic
+                    typing, together with its interpreted nature, make it an ideal language for scripting and rapid application
+                    development in many areas on most platforms.
+                </p>
+
+                <p>
+                    Python is an interpreted language, which can save you considerable time during program development because 
+                    no compilation and linking is necessary. The interpreter can be used interactively, which makes it easy to 
+                    experiment with features of the language, to write throw-away programs, or to test functions during bottom-up 
+                    program development. It is also a handy desk calculator.
+                </p>
+                <p>
+                    Python enables programs to be written compactly and readably. Programs written in Python are typically much 
+                    shorter than equivalent C, C++, or Java programs, for several reasons:
+                </p>
+                <ul>
+                    <li>the high-level data types allow you to express complex operations in a single statement;</li>
+                    <li>tatement grouping is done by indentation instead of beginning and ending brackets;</li>
+                    <li>no variable or argument declarations are necessary.</li>
+                </ul>
+
+                <p>
+                    By the way, the language is named after the BBC show “Monty Python’s Flying Circus” and has nothing to do 
+                    with reptiles. Making references to Monty Python skits in documentation is not only allowed, it is encouraged!
+                </p>
+                <p>
+                    <strong>NOTE: This manual assumes you already know how to install python and start up the interpreter.</strong>
+                </p>
+                <p>Visit the <a href="https://www.python.org">main site</a> for assistance if you're completely new to python.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="An_Informal_Introdution">
+            <header>An Informal Introdution</header>
+            <article>
+                <p>
+                    When commands are read from a tty, the interpreter is said to be in interactive mode. In this mode it prompts 
+                    for the next command with the primary prompt, usually three greater-than signs (>>>); for continuation lines 
+                    it prompts with the secondary prompt, by default three dots (...). The interpreter prints a welcome message 
+                    stating its version number and a copyright notice before printing the first prompt:
+                </p>
+                <p>
+                    In the examples used on this page, input and output are distinguished by the presence or absence of prompts 
+                    (>>> and …): to repeat the example, you must type everything after the prompt, when the prompt appears; lines 
+                    that do not begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by 
+                    itself in an example means you must type a blank line; this is used to end a multi-line command.
+                </p>
+                <p>
+                    Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in 
+                    Python start with the hash character, #, and extend to the end of the physical line. A comment may appear at the 
+                    start of a line or following whitespace or code, but not within a string literal. A hash character within a string 
+                    literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be 
+                    omitted when typing in examples.
+                </p>
+                <code>
+                              # this is the first comment
+                    spam = 1  # and this is the second comment
+                             # ... and now a third!
+                    text = "# This is not a comment because it's inside quotes.
+                </code>
+
+                <p>
+                    This tutorial introduces the reader informally to the basic concepts and features of the Python language and 
+                    system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained,
+                    so the tutorial can be read off-line as well.
+                </p>
+                <p>
+                    This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used 
+                    feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the 
+                    language’s flavor and style.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Numbers">
+            <header>Numbers</header>
+            <article>
+                <p>
+                    The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. 
+                    Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages 
+                    (for example, Pascal or C); parentheses (()) can be used for grouping. For example:
+                </p> 
+                <code>
+                    >>> 2 + 2
+                    4
+                    >>> 50 - 5*6
+                    20
+                    >>> (50 - 5*6) / 4
+                    5.0
+                    >>> 8 / 5  # division always returns a floating point number
+                    1.6
+                </code>
+                <p>
+                    The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float
+                </p>
+    
+                <p>
+                    Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional 
+                    result) you can use the // operator; to calculate the remainder you can use %:
+                </p>
+    
+                <code>
+                    >>> 17 / 3  # classic division returns a float
+                    5.666666666666667
+                    >>> 17 // 3  # floor division discards the fractional part
+                    5
+                    >>> 17 % 3  # the % operator returns the remainder of the division
+                    2
+                    >>> 5 * 3 + 2  # result * divisor + remainder
+                    17 
+                </code>
+                
+                <p>With Python, it is possible to use the ** operator to calculate powers
+                    <code>
+                        >>> 5 ** 2  # 5 squared
+                        25
+                        >>> 2 ** 7  # 2 to the power of 7
+                        128
+                    </code>
+                </p>
+                <p>
+                    The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next 
+                    interactive prompt:
+                    <code>
+                        >>> width = 20
+                        >>> height = 5 * 9
+                        >>> width * height
+                        900
+                    </code>
+                </p>
+                
+                <p>
+                    If a variable is not “defined” (assigned a value), trying to use it will give you an error:
+                    <code>
+                        >>> n  # try to access an undefined variable
+                        Traceback (most recent call last):
+                            File "<stdin>", line 1, in <module> 
+                        NameError: name 'n' is not defined
+                    </code>
+                </p>
+                
+                <p>
+                    There is full support for floating point; operators with mixed type operands convert the integer operand to 
+                    floating point:
+                    <code>
+                        >>> 4 * 3.75 - 1
+                        14.0
+                    </code>
+        
+                </p>
+                
+                <p>
+                    In interactive mode, the last printed expression is assigned to the variable _. This means that when you are using 
+                    Python as a desk calculator, it is somewhat easier to continue calculations, for example:
+                    <code>
+                        >>> tax = 12.5 / 100
+                        >>> price = 100.50
+                        >>> price * tax
+                        12.5625
+                        >>> price + _
+                        113.0625
+                        >>> round(_, 2)
+                        113.06
+                    </code>
+                </p>
+               
+                <p>
+                    This variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you would 
+                    create an independent local variable with the same name masking the built-in variable with its magic behavior.
+                </p>
+                <p>
+                    In addition to int and float, Python supports other types of numbers, such as Decimal and Fraction. Python also 
+                    has built-in support for complex numbers, and uses the j or J suffix to indicate the imaginary part (e.g. 3+5j).
+    
+                </p>
+    
+            </article>
+        </section>
+
+        <section class="main-section" id="Strings">
+            <header>Strings</header>
+            <article>
+                <p>
+                    Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be 
+                    enclosed in single quotes ('...') or double quotes ("...") with the same result. \ can be used to escape 
+                    quotes:
+
+                    <code>
+                        >>> 'spam eggs'  # single quotes
+                        'spam eggs'
+                        >>> 'doesn\'t'  # use \' to escape the single quote...
+                        "doesn't"
+                        >>> "doesn't"  # ...or use double quotes instead
+                        "doesn't"
+                        >>> '"Yes," they said.'
+                        '"Yes," they said.'
+                        >>> "\"Yes,\" they said."
+                        '"Yes," they said.'
+                        >>> '"Isn\'t," they said.'
+                        '"Isn\'t," they said.'
+                    </code>
+                </p>
+
+                <p>
+                    In the interactive interpreter, the output string is enclosed in quotes and special characters are escaped 
+                    with backslashes. While this might sometimes look different from the input (the enclosing quotes could change), 
+                    the two strings are equivalent. The string is enclosed in double quotes if the string contains a single quote and 
+                    no double quotes, otherwise it is enclosed in single quotes. The print() function produces a more readable output, 
+                    by omitting the enclosing quotes and by printing escaped and special characters:
+                    
+                    <code>
+                        >>> '"Isn\'t," they said.'
+                        '"Isn\'t," they said.'
+                        >>> print('"Isn\'t," they said.')
+                        "Isn't," they said.
+                        >>> s = 'First line.\nSecond line.'  # \n means newline
+                        >>> s  # without print(), \n is included in the output
+                        'First line.\nSecond line.'
+                        >>> print(s)  # with print(), \n produces a new line
+                        First line.
+                        Second line.
+                    </code>
+                </p>
+
+                <p>
+                    If you don’t want characters prefaced by \ to be interpreted as special characters, you can use raw strings by 
+                    adding an r before the first quote:
+                    
+                    <code>
+                        >>> print('C:\some\name')  # here \n means newline!
+                        C:\some
+                        ame
+                        >>> print(r'C:\some\name')  # note the r before the quote
+                        C:\some\name
+                    </code>
+                </p>
+
+                <p>
+                    String literals can span multiple lines. One way is using triple-quotes: """...""" or '''...'''. End of lines 
+                    are automatically included in the string, but it’s possible to prevent this by adding a \ at the end of the 
+                    line. The following example:
+
+                    <code>
+                        print("""\
+                        Usage: thingy [OPTIONS]
+                             -h                        Display this usage message
+                             -H hostname               Hostname to connect to
+                        """)                        
+                    </code>
+                </p>
+                <p>
+                    produces the following output (note that the initial newline is not included):
+                    <code>
+                        Usage: thingy [OPTIONS]
+                        -h                        Display this usage message
+                        -H hostname               Hostname to connect to
+                    </code>
+                </p>
+                <p>
+                    Strings can be concatenated (glued together) with the + operator, and repeated with *:
+                    <code>
+                    >>> # 3 times 'un', followed by 'ium'
+                        >>> 3 * 'un' + 'ium'
+                        'unununium'
+                    </code>
+                </p>
+                <p>
+                    Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically 
+                    concatenated.
+                    <code>
+                        >>> 'Py' 'thon'
+                        'Python'
+                        </code>
+                </p>
+                <p>
+                    This feature is particularly useful when you want to break long strings:
+                    <code>
+                        >>> text = ('Put several strings within parentheses '
+                        ...         'to have them joined together.')
+                        >>> text
+                        'Put several strings within parentheses to have them joined together.'
+                    </code>
+                </p>
+                <p>
+                    This only works with two literals though, not with variables or expressions:
+                    <code>>>> prefix = 'Py'
+                        >>> prefix 'thon'  # can't concatenate a variable and a string literal
+                          File "<stdin>", line 1
+                            prefix 'thon'
+                                        ^
+                        SyntaxError: invalid syntax
+                        >>> ('un' * 3) 'ium'
+                          File "<stdin>", line 1
+                            ('un' * 3) 'ium'
+                        SyntaxError: invalid syntax                   
+                    </code>
+                </p>
+                <p>
+                    If you want to concatenate variables or a variable and a literal, use +:
+                    <code>
+                        >>> prefix + 'thon'
+                        'Python'
+                    </code>
+                </p>
+                <p>
+                    Strings can be indexed (subscripted), with the first character having index 0. There is no separate character 
+                    type; a character is simply a string of size one:
+                    <code>
+                        >>> word = 'Python'
+                        >>> word[0]  # character in position 0
+                        'P'
+                        >>> word[5]  # character in position 5
+                        'n'
+                    </code>
+                </p>
+                <p>
+                    Indices may also be negative numbers, to start counting from the right:
+                    <code>
+                        >>> word[-1]  # last character
+                        'n'
+                        >>> word[-2]  # second-last character
+                        'o'
+                        >>> word[-6]
+                        'P'
+                    </code>
+                </p>
+                <p>
+                    Note that since -0 is the same as 0, negative indices start from -1. In addition to indexing, slicing is 
+                    also supported. While indexing is used to obtain individual characters, slicing allows you to obtain 
+                    substring:
+                    <code>>>> word[0:2]  # characters from position 0 (included) to 2 (excluded)
+                        'Py'
+                        >>> word[2:5]  # characters from position 2 (included) to 5 (excluded)
+                        'tho'
+                    </code>
+                </p>
+                <p>
+                    Note how the start is always included, and the end always excluded. This makes sure that s[:i] + s[i:] is 
+                    always equal to s:
+                    <code>
+                        >>> word[:2] + word[2:]
+                        'Python'
+                        >>> word[:4] + word[4:]
+                        'Python'
+                    </code>
+                </p>
+                <p>
+                    Slice indices have useful defaults; an omitted first index defaults to zero, an omitted second index defaults 
+                    to the size of the string being sliced.
+                    <code>
+                        >>> word[:2]   # character from the beginning to position 2 (excluded)
+                        'Py'
+                        >>> word[4:]   # characters from position 4 (included) to the end
+                        'on'
+                        >>> word[-2:]  # characters from the second-last (included) to the end
+                        'on'
+                    </code>
+                </p>
+                <p>
+                    One way to remember how slices work is to think of the indices as pointing between characters, with the left 
+                    edge of the first character numbered 0. Then the right edge of the last character of a string of n characters 
+                    has index n, for example:
+                    <code>
+                        +---+---+---+---+---+---+
+                        | P | y | t | h | o | n |
+                        +---+---+---+---+---+---+
+                        0   1   2   3   4   5   6
+                       -6  -5  -4  -3  -2  -1
+                    </code>
+                </p>
+                <p>
+                    The first row of numbers gives the position of the indices 0…6 in the string; the second row gives the c
+                    orresponding negative indices. The slice from i to j consists of all characters between the edges labeled i 
+                    and j, respectively. For non-negative indices, the length of a slice is the difference of the indices, if 
+                    both are within bounds. For example, the length of word[1:3] is 2. Attempting to use an index that is too 
+                    large will result in an error:
+                    <code>
+                        >>> word[42]  # the word only has 6 characters
+                        Traceback (most recent call last):
+                          File "<stdin>", line 1, in <module>
+                        IndexError: string index out of range
+                    </code>
+                </p>
+                <p>
+                    However, out of range slice indexes are handled gracefully when used for slicing:
+                    <code>
+                        >>> word[4:42]
+                        'on'
+                        >>> word[42:]
+                        ''
+                    </code>
+                </p>
+                <p>
+                    Python strings cannot be changed — they are immutable. Therefore, assigning to an indexed position in the 
+                    string results in an error:
+                    <code>
+                        >>> word[0] = 'J'
+                        Traceback (most recent call last):
+                          File "<stdin>", line 1, in <module>
+                        TypeError: 'str' object does not support item assignment
+                        >>> word[2:] = 'py'
+                        Traceback (most recent call last):
+                          File "<stdin>", line 1, in <module>
+                        TypeError: 'str' object does not support item assignment
+                        Lists
+                    </code>
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Lists">
+            <header>Lists</header>
+            <article>
+                <p>
+                    Python knows a number of compound data types, used to group together other values. The most versatile is the 
+                    list, which can be written as a list of comma-separated values (items) between square brackets. Lists might 
+                    contain items of different types, but usually the items all have the same type.
+                    <code>
+                        >>> squares = [1, 4, 9, 16, 25]
+                        >>> squares
+                        [1, 4, 9, 16, 25]
+                    </code>
+                </p>
+                <ul>
+                    <li>lists can be indexed and sliced:</li>
+                    <li>Lists also support operations like concatenation</li>
+                    <li>lists are a mutable type, i.e. it is possible to change their content:</li>
+                    <li>List comprehensions (more about this later)</li>
+                    <li>Lists methods</li>
+                </ul>
+                <p>
+                    Here are some examples of above list operations:
+                    <code>
+                        >>> squares[0]  # indexing returns the item
+                        1
+                        >>> squares[-1]
+                        25
+                        >>> squares[-3:]  # slicing returns a new list
+                        [9, 16, 25]
+                        >>> squares + [36, 49, 64, 81, 100] #concatenation
+                        [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+                        cubes = [1, 8, 27, 65, 125]  # something's wrong here
+                        >>> 4 ** 3  # the cube of 4 is 64, not 65!
+                        64
+                        >>> cubes[3] = 64  # replace the wrong value
+                        >>> cubes
+                        [1, 8, 27, 64, 125]
+                        
+                        >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+                        >>> fruits.count('apple')
+                        2
+                        >>> fruits.count('tangerine')
+                        0
+                        >>> fruits.index('banana')
+                        3
+                        >>> fruits.index('banana', 4)  # Find next banana starting a position 4
+                        6
+                        >>> fruits.reverse()
+                        >>> fruits
+                        ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
+                        >>> fruits.append('grape')
+                        >>> fruits
+                        ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
+                        >>> fruits.sort()
+                        >>> fruits
+                        ['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
+                        >>> fruits.pop()
+                        'pear'
+                    </code>
+                </p>
+                <p>
+                    List comprehensions provide a concise way to create lists. Common applications are to make new lists where 
+                    each element is the result of some operations applied to each member of another sequence or iterable, or to 
+                    create a subsequence of those elements that satisfy a certain condition. For example, assume we want to create 
+                    a list of squares, like.
+                    <code>
+                        >>> squares = []
+                        >>> for x in range(10):
+                        ...     squares.append(x**2)
+                        ...
+                        >>> squares
+                        [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+                    </code>
+                </p>  
+                <p>
+                    Note that this creates (or overwrites) a variable named x that still exists after the loop completes. 
+                    We can calculate the list of squares without any side effects using:
+                    <code>
+                        squares = [x**2 for x in range(10)]
+                    </code>
+                </p>  
+
+                <p>
+                    A list comprehension consists of brackets containing an expression followed by a for clause, then zero or 
+                    more for or if clauses. The result will be a new list resulting from evaluating the expression in the context 
+                    of the for and if clauses which follow it. For example, this listcomp combines the elements of two lists if 
+                    they are not equal:
+                    <code>
+                        >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+                        [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+                    </code>
+                </p>
+                <p>
+                    and it's equivalent to:
+                    <code>
+                        >>> combs = []
+                        >>> for x in [1,2,3]:
+                        ...     for y in [3,1,4]:
+                        ...         if x != y:
+                        ...             combs.append((x, y))
+                        ...
+                        >>> combs
+                        [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+                    </code>
+                </p>    
+            </article>
+        </section>
+        
+        <section class="main-section" id="Tuples">
+            <header>Tuples</header>
+            <article>
+                <p>
+                    We saw that lists and strings have many common properties, such as indexing and slicing operations. 
+                    They are two examples of sequence data types. Since Python is an evolving language, other sequence data 
+                    types may be added. There is also another standard sequence data type: the tuple.
+                </p>
+                <p>
+                    A tuple consists of a number of values separated by commas, for instance:
+                    <code>
+                        >>> t = 12345, 54321, 'hello!'
+                        >>> t[0]
+                        12345
+                        >>> t
+                        (12345, 54321, 'hello!')
+                        >>> # Tuples may be nested:
+                        ... u = t, (1, 2, 3, 4, 5)
+                        >>> u
+                        ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+                        >>> # Tuples are immutable:
+                        ... t[0] = 88888
+                    </code>
+                </p>
+                <p>
+                    Traceback (most recent call last):
+                    <code>
+                          File "<stdin>", line 1, in <module>
+                        TypeError: 'tuple' object does not support item assignment
+                        >>> # but they can contain mutable objects:
+                        ... v = ([1, 2, 3], [3, 2, 1])
+                        >>> v
+                        ([1, 2, 3], [3, 2, 1])
+                    </code>
+                </p>
+                <p>
+                    As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly;
+                     they may be input with or without surrounding parentheses, although often parentheses are necessary anyway 
+                     (if the tuple is part of a larger expression). It is not possible to assign to the individual items of a tuple,
+                    however it is possible to create tuples which contain mutable objects, such as lists.
+                </p>
+                <p>
+                    Though tuples may seem similar to lists, they are often used in different situations and for different purposes.
+                    Tuples are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking 
+                    (see later in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and 
+                    their elements are usually homogeneous and are accessed by iterating over the list.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Dictionary">
+            <header>Dictionary</header>
+            <article>
+                <p>
+                    Another useful data type built into Python is the dictionary. Dictionaries are sometimes found in other languages
+                    as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range of numbers, 
+                    dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. 
+                    Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable 
+                    object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be
+                    modified in place using index assignments, slice assignments, or methods like append() and extend().
+                </p>
+
+                <p>
+                    It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique
+                    (within one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:
+                    value pairs within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries 
+                    are written on output.
+                </p>
+
+                <p>
+                    The main operations on a dictionary are storing a value with some key and extracting the value given the key. 
+                    It is also possible to delete a key:value pair with del. If you store using a key that is already in use, the 
+                    old value associated with that key is forgotten. It is an error to extract a value using a non-existent key.
+                </p>
+                <p>
+                    Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order 
+                    (if you want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use 
+                    the in keyword. Here is a small example using a dictionary:
+                </p>
+
+                <code>
+                    >>> tel = {'jack': 4098, 'sape': 4139}
+                    >>> tel['guido'] = 4127
+                    >>> tel
+                    {'jack': 4098, 'sape': 4139, 'guido': 4127}
+                    >>> tel['jack']
+                    4098
+                    >>> del tel['sape']
+                    >>> tel['irv'] = 4127
+                    >>> tel
+                    {'jack': 4098, 'guido': 4127, 'irv': 4127}
+                    >>> list(tel)
+                    ['jack', 'guido', 'irv']
+                    >>> sorted(tel)
+                    ['guido', 'irv', 'jack']
+                    >>> 'guido' in tel
+                    True
+                    >>> 'jack' not in tel
+                    False
+                </code>
+                <ul>
+                    <li>   
+                        The dict() constructor builds dictionaries directly from sequences of key-value pairs:
+                        <code>
+                            >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+                            {'sape': 4139, 'guido': 4127, 'jack': 4098}
+                        </code>
+                    </li>
+
+                    <li>    
+                        In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
+                        <code>
+                            >>> {x: x**2 for x in (2, 4, 6)}
+                            {2: 4, 4: 16, 6: 36}
+                        </code>
+                    </li>
+
+                    <li>
+                        When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:
+                        <code>
+                            >>> dict(sape=4139, guido=4127, jack=4098)
+                            {'sape': 4139, 'guido': 4127, 'jack': 4098}
+                        </code>
+                    </li>
+                </ul>
+            </article>
+        </section> 
+
+        <section class="main-section" id="if_Statements">
+            <header>if Statements</header>
+            <article>
+                <p>
+                    Perhaps the most well-known statement type is the if statement. For example:
+                </p>
+
+                <code>
+                    >>> x = int(input("Please enter an integer: "))
+                    Please enter an integer: 42
+                    >>> if x < 0:
+                    ...     x = 0
+                    ...     print('Negative changed to zero')
+                    ... elif x == 0:
+                    ...     print('Zero')
+                    ... elif x == 1:
+                    ...     print('Single')
+                    ... else:
+                    ...     print('More')
+                    ...
+                    More
+                </code>
+                <p>
+                    There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, 
+                    and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case 
+                    statements found in other languages.
+                </p>         
+            </article>
+        </section>
+
+        <section class="main-section" id="for_Statements">
+            <header>for Statements</header>
+            <article>
+                <p>
+                    The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always 
+                    iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define 
+                    both the iteration step and halting condition (as C), Python’s for statement iterates over the items of any          sequence 
+                    (a list or a string), in the order that they appear in the sequence. For example (no pun intended):
+                </p>
+
+                <code>
+                    >>> # Measure some strings:
+                    ... words = ['cat', 'window', 'defenestrate']
+                    >>> for w in words:
+                    ...     print(w, len(w))
+                    ...
+                    cat 3
+                    window 6
+                    defenestrate 12
+                </code>
+
+                <p>
+                    If you need to modify the sequence you are iterating over while inside the loop (for example to duplicate 
+                    selected items), it is recommended that you first make a copy. Iterating over a sequence does not implicitly 
+                    make a copy. The slice notation makes this especially convenient:
+                </p>
+
+                <code>
+                    >>> for w in words[:]:  # Loop over a slice copy of the entire list.
+                    ...     if len(w) > 6:
+                    ...         words.insert(0, w)
+                    ...
+                    >>> words
+                            ['defenestrate', 'cat', 'window', 'defenestrate']
+                </code>
+                <ul>
+                    <li>
+                        <p>   The break statement, like in C, breaks out of the innermost enclosing for or while loop,</p>
+                <p>  
+                    Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the list
+                    (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break 
+                    statement. This is exemplified by the following loop, which searches for prime numbers:
+                </p>
+
+                <code>
+                    >>> for n in range(2, 10):
+                    ...     for x in range(2, n):
+                    ...         if n % x == 0:
+                    ...             print(n, 'equals', x, '*', n//x)
+                    ...             break
+                    ...     else:
+                    ...         # loop fell through without finding a factor
+                    ...         print(n, 'is a prime number')
+                    ...
+                    2 is a prime number
+                    3 is a prime number
+                    4 equals 2 * 2
+                    5 is a prime number
+                    6 equals 2 * 3
+                    7 is a prime number
+                    8 equals 2 * 4
+                    9 equals 3 * 3
+                </code>
+                <p>
+                    (Yes, this is the correct code. Look closely: the else clause belongs to the for loop, not the if statement.) 
+                    When used with a loop, the else clause has more in common with the else clause of a try statement than it does 
+                    that of if statements: a try statement’s else clause runs when no exception occurs, and a loop’s else clause runs 
+                    when no break occurs.
+                </p>
+                    </li>
+
+                    <li>
+                        <p>The continue statement, also borrowed from C, continues with the next iteration of the loop:</p>
+                        <code>
+                            >>> for num in range(2, 10):
+                            ...     if num % 2 == 0:
+                            ...         print("Found an even number", num)
+                            ...         continue
+                            ...     print("Found a number", num)
+                            Found an even number 2
+                            Found a number 3
+                            Found an even number 4
+                            Found a number 5
+                            Found an even number 6
+                            Found a number 7
+                            Found an even number 8
+                            Found a number 9
+                        </code>
+
+                        <p>    
+                            The pass statement does nothing. It can be used when a statement is required syntactically but the 
+                            program requires no action. For example:
+                        </p>
+                        <code>
+                            >>> while True:
+                            ...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
+                            ...</code>
+                    </li>
+                </ul>                      
+            </article>
+        </section>
+
+        <section class="main-section" id="The_range()_Function">
+            <header>The range() Function</header>
+            <article>
+                <p>
+                    If you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. 
+                    It generates arithmetic progressions:
+                </p>
+                <code>
+                    >>> for i in range(5):
+                    ...     print(i)
+                    ...
+                    0
+                    1
+                    2
+                    3
+                    4
+                </code>
+
+                <ul>
+                    <li>
+                        <p>
+                            The given end point is never part of the generated sequence; range(10) generates 10 values, 
+                            the legal indices for items of a sequence of length 10. It is possible to let the range start at 
+                            another number, or to specify a different increment (even negative; sometimes this is called the 
+                            ‘step’):
+                        </p>
+
+                        <code>
+                            range(5, 10)
+                               5, 6, 7, 8, 9
+                     
+                            range(0, 10, 3)
+                               0, 3, 6, 9
+                     
+                            range(-10, -100, -30)
+                               -10, -40, -70
+                        </code>
+                    </li>
+                    <li>
+                        <p>To iterate over the indices of a sequence, you can combine range() and len() as follows:</p>
+                        <code>
+                            >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
+                            >>> for i in range(len(a)):
+                            ...     print(i, a[i])
+                            ...
+                            0 Mary
+                            1 had
+                            2 a
+                            3 little
+                            4 lamb
+                        </code>
+                    </li> 
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Defining_Functions">
+            <header>Defining Functions</header>
+            <article>
+                <p>
+                    The keyword def introduces a function definition. It must be followed by the function name and the parenthesized
+                    list of formal parameters. The statements that form the body of the function start at the next line, and must be 
+                    indented.
+                </p>
+                <p>
+                    The first statement of the function body can optionally be a string literal; this string literal is the function’s
+                    documentation string, or docstring. There are tools which use docstrings to automatically produce online or 
+                    printed documentation, or to let the user interactively browse through code; it’s good practice to include 
+                    docstrings in code that you write, so make a habit of it
+                </p>
+                <p>
+                    We can create a function that writes the Fibonacci series to an arbitrary boundary:</p>
+
+                <code>
+                    >>> def fib(n):    # write Fibonacci series up to n
+                    ...     """Print a Fibonacci series up to n."""
+                    ...     a, b = 0, 1
+                    ...     while a < n:
+                    ...         print(a, end=' ')
+                    ...         a, b = b, a+b
+                    ...     print()
+                    ...
+                    >>> # Now call the function we just defined:
+                    ... fib(2000)
+                    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+                </code>
+                <p>
+                    The execution of a function introduces a new symbol table used for the local variables of the function. 
+                    More precisely, all variable assignments in a function store the value in the local symbol table; whereas 
+                    variable references first look in the local symbol table, then in the local symbol tables of enclosing functions,
+                    then in the global symbol table, and finally in the table of built-in names. Thus, global variables cannot be 
+                    directly assigned a value within a function (unless named in a global statement), although they may be referenced.
+                </p>
+
+                <p>
+                    The actual parameters (arguments) to a function call are introduced in the local symbol table of the called function when it is called; thus, arguments are passed using call by value (where the value is always an object reference, not the value
+                    of the object). [1] When a function calls another function, a new local symbol table is created for that call.
+                </p>
+
+                <p>
+                    A function definition introduces the function name in the current symbol table. The value of the function name 
+                    has a type that is recognized by the interpreter as a user-defined function. This value can be assigned to 
+                    another name which can then also be used as a function. This serves as a general renaming mechanism:
+                </p>
+
+                <code>
+                    >>> fib
+                    <function fib at 10042ed0>
+                    >>> f = fib
+                    >>> f(100)
+                    0 1 1 2 3 5 8 13 21 34 55 89
+                    
+                </code>
+                
+                <p>
+                    Coming from other languages, you might object that fib is not a function but a procedure since it doesn’t 
+                    return a value. In fact, even functions without a return statement do return a value, albeit a rather boring 
+                    one. This value is called None (it’s a built-in name). Writing the value None is normally suppressed by the 
+                    interpreter if it would be the only value written. You can see it if you really want to using print():
+                </p>
+                
+                <code>
+                    >>> fib(0)
+                    >>> print(fib(0))
+                    None
+                </code>
+
+                <p>It is simple to write a function that returns a list of the numbers of the Fibonacci series, instead of printing it:</p>
+                <code>
+                    >>> def fib2(n):  # return Fibonacci series up to n
+                    ...     """Return a list containing the Fibonacci series up to n."""
+                    ...     result = []
+                    ...     a, b = 0, 1
+                    ...     while a < n:
+                    ...         result.append(a)    # see below
+                    ...         a, b = b, a+b
+                    ...     return result
+                    ...
+                    >>> f100 = fib2(100)    # call it
+                    >>> f100                # write the result
+                    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+                </code>
+
+                <p>This example, as usual, demonstrates some new Python features:</p>
+                <ul>
+                    <li>    
+                        The return statement returns with a value from a function. return without an expression argument returns 
+                        None. Falling off the end of a function also returns None.
+                    </li>
+                    <li>
+                        The statement result.append(a) calls a method of the list object result. A method is a function that 
+                        ‘belongs’ to an object and is named obj.methodname, where obj is some object (this may be an expression), 
+                        and methodname is the name of a method that is defined by the object’s type. Different types define 
+                        different methods. Methods of different types may have the same name without causing ambiguity. 
+                        (It is possible to define your own object types and methods, using classes, see Classes) The method 
+                        append() shown in the example is defined for list objects; it adds a new element at the end of the list. 
+                        In this example it is equivalent to result = result + [a], but more efficient.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+              <ul>
+                <li>
+                    <p>All documentation on this page is taken from <a href="https://docs.python.org/3/tutorial/index.html">PSF</a></p>
+                </li>
+            </ul>
+           </article>   
+        </section>
+    </main>
+</body>
+</html>
