@@ -5,14 +5,14 @@
   A student at <a href="https://microverse.org"><img align="center" src="https://img.shields.io/badge/Microverse-blueviolet"/><a/> <br>
   <em>always <b>Passionate</b>
     about new challenges to 
-    <b>grow</b> <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Rocket.gif" width="18px">and love to share what I learn and receive feedback for  
-    <b>improving</b> my skills<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Medal.gif" width="20px">&nbsp.
+    <b>grow.</b> <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Rocket.gif" width="18px">Looking to collaborate with 👯 other <b> Web Developers</b> and
+    <b>Excel</b> src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Medal.gif" width="20px">&nbsp.
   </em> 
   <br>
 
 ### Hi there, I'm Tresor Sawasawa 👋
 ## I'm still a Student, Developer, and ElectoTechnician!!
 - 🌱 I’m currently learning everything 🤣
-- 👯 I’m looking to collaborate with other Web Developer
+-
 - ⚡ Fun fact: I like to listen musics and watch Football matches
 - 😆 Pronouns: He/His
