@@ -2,7 +2,7 @@
 
  
 <p align="center">
-  A student at <a href="https://www.freecodecamp.org/"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png"/><a/> <br>
+  A student at <a href="https://www.freecodecamp.org/"><img width="60" height="20" align="center" src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png"/><a/> <br>
   <em>always <b>Passionate</b>
     about new challenges to 
     <b>grow.</b> <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Rocket.gif" width="18px">Looking to collaborate with 👯 other <b> Web Developers</b> and
