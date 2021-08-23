@@ -1,0 +1,71 @@
+:root {
+    --col1: darkgreen;
+    --col2: rgb(2, 2, 14);
+    --col3: brown;
+    --col4: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background: rgb(2, 2, 14);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--col4);
+    user-select: none;
+}
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(37, 95, 37);
+    height: 25px;
+}
+button {
+    background: var(--col1);
+    color: var(--col4);
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 180px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 7px;
+    cursor: pointer;
+}
+button:hover {
+    background: var(--col3);
+    color: var(--col4);
+    font-family: monospace;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+#delete-btn {
+    background: var(--col4);
+    color: var(--col1);
+}
+#delete-btn:hover {
+    background: var(--col3);
+    color: var(--col4);
+    font-family: monospace;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;  
+}
+li {
+    margin-top: 5px;
+}
+a {
+    color: var(--col1);
+}
