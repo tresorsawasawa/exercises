@@ -38,3 +38,7 @@
 ![React](https://img.shields.io/badge/-React-000000?style=flat&logo=react)
 
 <hr>
+<br>
+🤓 **Interested:** <br>
+
+![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
