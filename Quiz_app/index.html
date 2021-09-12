@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <div class="home-box custom-box hide">
+        <h3>Instructions</h3>
+        <p>Total number of questions: <span class="total-questions">5</span></p>
+        <button type="button" class="btn">Start Quiz</button>
+    </div>
+    <div class="quiz-box custom-box ">
+        <div class="question-number">
+            Question 1 of 5
+        </div>
+        <div class="question-text">
+            Which month comes right before September ?
+        </div>
+        <div class="option-container">
+            <div class="option">July</div>
+            <div class="option">August</div>
+            <div class="option">October</div>
+            <div class="option">November</div>
+        </div>
+        <div class="next-queston-btn">
+            <button type="button" class="btn">Next</button>
+        </div>
+        <div class="answers-indicator">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Total Question</td>
+                <td><span class="total-question">5</span></ta>
+            </tr>
+            <tr>
+                <td>Total Attempt</td>
+                <td><span class="total-attempt">4</span></ta>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct">3</span></ta>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong">2</span></ta>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage">60.00%</span></ta>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+                <td><span class="total-score">3 / 5</span></ta>
+            </tr>
+        </table>
+        <button type="button" class="btn">Try Again</button>
+        <button type="button" class="btn">Go To Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
