@@ -68,7 +68,7 @@ body{
 .quiz-box .question-number,
 .quiz-box .question-text,
 .quiz-box .option-container,
-.quiz-box .next-queston-btn,
+.quiz-box .next-question-btn,
 .quiz-box .answers-indicator{
     width: 100%;
     float: left;
