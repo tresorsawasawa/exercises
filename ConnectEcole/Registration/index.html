@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <!-- header1 -->
+    <nav>
+       <img src="img/logo.png">
+       <ul>
+         <li>Application</li>
+       </ul>
+    </nav> 
+ <!-- partial:index.partial.html -->
+    <section class="design-process-section" id="process-tab">
+    <div class="container">
+     <div class="row">
+       <div class="col-xs-12"> 
+         <!-- design process steps--> 
+         <!-- Nav tabs -->
+         <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+           <li role="presentation" class="active"><a href="#discover" aria-controls="discover" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i>
+             <p>Applicant Information</p>
+             </a></li>
+           <li role="presentation"><a href="#strategy" aria-controls="strategy" role="tab" class="strategy" id="h_second"><i class="fa fa-list" aria-hidden="true"></i>
+             <p>Academic information</p>
+             </a></li>
+           <li role="presentation"><a href="#optimization" aria-controls="optimization" id="h_third" role="tab" class="highschool"><i class="fa fa-book" aria-hidden="true"></i>
+             <p>High school information</p>
+             </a></li>
+ 
+         </ul>
+         <!-- end design process steps--> 
+         <!-- Tab panes -->
+         <div class="tab-content">
+           <div role="tabpanel" class="tab-pane active discover" id="discover">
+             <div class="design-process-content">
+               <h3 class="semi-bold">Applicant Information</h3>
+               <div class="row">
+                <div class="col-12">
+                  <div class="alert alert-danger" style="display: none;"></div>
+                </div>
+                <div class="col-md-6">
+                    <span class="anchor" id="formUserEdit"></span>
+                    <hr class="my-5">
+                    <!-- form user info -->
+                    <div class="card">
+                     <div class="card-body">
+                       <form autocomplete="off" class="formApp" role="form" action='main.php'>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Names</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="text" value="" placeholder="Names" id="names" name="names">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Email Address</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="email" value="" name="email" placeholder="Email Address" id="email">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Phone Number</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="text" value="" name="phone" placeholder="Phone" id="phone">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Father's Name</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="text" value="" name="father" placeholder="Father Names" id="fname">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Mother's Name</label>
+                           <div class="col-lg-9">
+                             <input class="form-control" type="text" value="" name="mother" placeholder="Mother Name" id="mname">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Parent / Guadian Phone</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="text" value="" name="guadianphone" placeholder="Guadian/Parent Phone" id="gphone">
+                           </div>
+                         </div>
+ 
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Additional information</label>
+                           <div class="col-lg-9">
+                             <textarea class="form-control" placeholder="Type any additional information" value="" name="remarks"></textarea>
+                           </div>
+                         </div>
+                     </div>
+                   </div>
+                   <!-- /form user info -->
+                 </div>  
+                 <div class="col-md-6">
+                   <span class="anchor" id="formUserEdit"></span>
+                   <hr class="my-5">
+                   <!-- form user info -->
+                   <div class="card card-outline-secondary">
+                     <div class="card-body">
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Gender</label>
+                           <div class="col-lg-9">
+                             <select class="form-control required" name="gender" id="gender">
+                               <option selected="">Select Gender</option>
+                               <option value="1">Male</option>
+                               <option value="2">Female</option>
+                             </select>
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Date Of Birth</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="date" value="" name="dob" placeholder="Date of birth" id="dob">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Place of Birth</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="text" value="" name="placeofbirth" placeholder="Place of Birth" id="pbirth">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Country of birth</label>
+                           <div class="col-lg-9">
+                             <select class="form-control required" name="cbirth" id="cbirth">
+                               <option value=''>Select Country</option><option value='1'>Afghanistan</option><option value='2'>Albania</option><option value='3'>Algeria</option><option value='4'>Andorra</option><option value='5'>Angola</option><option value='6'>Argentina</option><option value='7'>Armenia</option><option value='8'>Australia</option><option value='9'>Austria</option><option value='10'>Azerbaijan</option><option value='11'>Bahamas</option><option value='12'>Bahrain</option><option value='13'>Bangladesh</option><option value='14'>Barbados</option><option value='15'>Belarus</option><option value='16'>Belgium</option><option value='17'>Belize</option><option value='18'>Benin</option><option value='19'>Bhutan</option><option value='20'>Bolivia</option><option value='21'>Bosnia-Herzegovina</option><option value='22'>Botswana</option><option value='23'>Brazil</option><option value='24'>Britain</option><option value='25'>Brunei</option><option value='26'>Bulgaria</option><option value='27'>Burkina</option><option value='28'>Burma (official name Myanmar)</option><option value='29'>Burundi</option><option value='30'>Cambodia</option><option value='31'>Cameroon</option><option value='32'>Canada</option><option value='33'>Cape Verde Islands</option><option value='185'>Central African Republic</option><option value='34'>Chad</option><option value='35'>Chile</option><option value='36'>China</option><option value='37'>Colombia</option><option value='177'>Congo - DRC</option><option value='38'>Congo-Brazzaville</option><option value='39'>Costa Rica</option><option value='40'>Croatia</option><option value='41'>Cuba</option><option value='42'>Cyprus</option><option value='43'>Czech Republic</option><option value='44'>Denmark</option><option value='45'>Djibouti</option><option value='46'>Dominica</option><option value='47'>Dominican Republic</option><option value='48'>Ecuador</option><option value='49'>Egypt</option><option value='50'>El Salvador</option><option value='51'>England</option><option value='52'>Eritrea</option><option value='53'>Estonia</option><option value='54'>Ethiopia</option><option value='55'>Fiji</option><option value='56'>Finland</option><option value='57'>France</option><option value='58'>Gabon</option><option value='59'>Gambia, the</option><option value='60'>Georgia</option><option value='61'>Germany</option><option value='62'>Ghana</option><option value='63'>Greece</option><option value='64'>Grenada</option><option value='65'>Guatemala</option><option value='66'>Guinea</option><option value='67'>Guyana</option><option value='68'>Haiti</option><option value='69'>Holland (also Netherlands)</option><option value='70'>Honduras</option><option value='71'>Hungary</option><option value='72'>Iceland</option><option value='73'>India</option><option value='74'>Indonesia</option><option value='75'>Iran</option><option value='76'>Iraq</option><option value='77'>Ireland, Republic of</option><option value='78'>Italy</option><option value='183'>Ivory Coast</option><option value='186'>Ivory Coast</option><option value='79'>Jamaica</option><option value='80'>Japan</option><option value='81'>Jordan</option><option value='82'>Kazakhstan</option><option value='83'>Kenya</option><option value='84'>Kuwait</option><option value='85'>Laos</option><option value='86'>Latvia</option><option value='87'>Lebanon</option><option value='88'>Liberia</option><option value='89'>Libya</option><option value='90'>Liechtenstein</option><option value='91'>Lithuania</option><option value='92'>Luxembourg</option><option value='93'>Macedonia</option><option value='94'>Madagascar</option><option value='95'>Malawi</option><option value='96'>Malaysia</option><option value='97'>Maldives</option><option value='98'>Mali</option><option value='99'>Malta</option><option value='100'>Mauritania</option><option value='101'>Mauritius</option><option value='102'>Mexico</option><option value='103'>Moldova</option><option value='104'>Monaco</option><option value='105'>Mongolia</option><option value='106'>Montenegro</option><option value='107'>Morocco</option><option value='108'>Mozambique</option><option value='109'>Myanmar see Burma</option><option value='110'>Namibia</option><option value='111'>Nepal</option><option value='112'>Netherlands, the (see Holland)</option><option value='113'>New Zealand</option><option value='114'>Nicaragua</option><option value='115'>Niger</option><option value='116'>Nigeria</option><option value='117'>North Korea</option><option value='118'>Norway</option><option value='119'>Oman</option><option value='120'>Pakistan</option><option value='121'>Panama</option><option value='122'>Papua New Guinea</option><option value='123'>Paraguay</option><option value='124'>Peru</option><option value='126'>Poland</option><option value='127'>Portugal</option><option value='128'>Qatar</option><option value='129'>Romania</option><option value='130'>Russia</option><option value='131'>Rwanda</option><option value='184'>Saotome</option><option value='132'>Saudi Arabia</option><option value='133'>Scotland</option><option value='134'>Senegal</option><option value='135'>Serbia</option><option value='136'>Seychelles, the</option><option value='137'>Sierra Leone</option><option value='138'>Singapore</option><option value='139'>Slovakia</option><option value='140'>Slovenia</option><option value='141'>Solomon Islands</option><option value='142'>Somalia</option><option value='143'>South Africa</option><option value='144'>South Korea</option><option value='180'>South Sudan</option><option value='145'>Spain</option><option value='146'>Sri Lanka</option><option value='147'>Sudan</option><option value='148'>Suriname</option><option value='149'>Swaziland</option><option value='150'>Sweden</option><option value='151'>Switzerland</option><option value='152'>Syria</option><option value='153'>Taiwan</option><option value='154'>Tajikistan</option><option value='155'>Tanzania</option><option value='156'>Thailand</option><option value='125'>the Philippines</option><option value='157'>Togo</option><option value='158'>Trinidad and Tobago</option><option value='159'>Tunisia</option><option value='160'>Turkey</option><option value='161'>Turkmenistan</option><option value='162'>Tuvalu</option><option value='163'>Uganda</option><option value='164'>Ukraine</option><option value='165'>United Arab Emirates (UAE)</option><option value='166'>United Kingdom (UK)</option><option value='167'>United States of America (USA)</option><option value='168'>Uruguay</option><option value='169'>Uzbekistan</option><option value='170'>Vanuatu</option><option value='171'>Venezuela</option><option value='172'>Vietnam</option><option value='173'>Wales</option><option value='174'>Western Samoa</option><option value='175'>Yemen</option><option value='176'>Yugoslavia</option><option value='178'>Zambia</option><option value='179'>Zimbabwe</option>                            </select>
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Current Address</label>
+                           <div class="col-lg-9">
+                             <input type="text" class="form-control" name="current_address" id="current_address" placeholder="Select Current Address">
+                           </div>
+                         </div>
+                         <div class="form-group row" style="display:none;">
+                           <label class="col-lg-3 col-form-label form-control-label">District</label>
+                           <div class="col-lg-9">
+                             <input type="text" class="form-control" name="district" id="district" value='none' placeholder="Enter your district">
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">Nationality</label>
+                           <div class="col-lg-9">
+                             <!-- <input class="form-control required" type="text" value="" name="nationality" placeholder="Nationality" id="nationality"> -->
+                             <select class="form-control required" name="nationality" id="nationality">
+                               <option value=''>Select Nationality</option><option value='1'>Afghan</option><option value='2'>Albanian</option><option value='3'>Algerian</option><option value='167'>American</option><option value='4'>Andorran</option><option value='5'>Angolan</option><option value='6'>Argentinian</option><option value='7'>Armenian</option><option value='8'>Australian</option><option value='9'>Austrian</option><option value='10'>Azerbaijani</option><option value='11'>Bahamian</option><option value='12'>Bahraini</option><option value='13'>Bangladeshi</option><option value='14'>Barbadian</option><option value='15'>Belarusian or Belarusan</option><option value='16'>Belgian</option><option value='17'>Belizean</option><option value='18'>Beninese</option><option value='19'>Bhutanese</option><option value='20'>Bolivian</option><option value='21'>Bosnian</option><option value='22'>Botswanan</option><option value='23'>Brazilian</option><option value='24'>British</option><option value='166'>British</option><option value='25'>Bruneian</option><option value='26'>Bulgarian</option><option value='27'>Burkinese</option><option value='28'>Burmese</option><option value='29'>Burundian</option><option value='30'>Cambodian</option><option value='31'>Cameroonian</option><option value='32'>Canadian</option><option value='33'>Cape Verdean</option><option value='185'>Central African</option><option value='34'>Chadian</option><option value='35'>Chilean</option><option value='36'>Chinese</option><option value='37'>Colombian</option><option value='177'>Congolese - DRC</option><option value='38'>Congolese-Brazzaville</option><option value='39'>Costa Rican</option><option value='40'>Croat or Croatian</option><option value='41'>Cuban</option><option value='42'>Cypriot</option><option value='43'>Czech</option><option value='44'>Danish</option><option value='45'>Djiboutian</option><option value='46'>Dominican</option><option value='47'>Dominican</option><option value='69'>Dutch</option><option value='112'>Dutch</option><option value='48'>Ecuadorean</option><option value='49'>Egyptian</option><option value='165'>Emirati</option><option value='51'>English</option><option value='52'>Eritrean</option><option value='53'>Estonian</option><option value='54'>Ethiopian</option><option value='55'>Fijian</option><option value='56'>Finnish</option><option value='57'>French</option><option value='58'>Gabonese</option><option value='59'>Gambian</option><option value='60'>Georgian</option><option value='61'>German</option><option value='62'>Ghanaian</option><option value='63'>Greek</option><option value='64'>Grenadian</option><option value='65'>Guatemalan</option><option value='66'>Guinean</option><option value='67'>Guyanese</option><option value='68'>Haitian</option><option value='70'>Honduran</option><option value='71'>Hungarian</option><option value='72'>Icelandic</option><option value='73'>Indian</option><option value='74'>Indonesian</option><option value='75'>Iranian</option><option value='76'>Iraqi</option><option value='77'>Irish</option><option value='78'>Italian</option><option value='183'>Ivoirien</option><option value='186'>Ivorian</option><option value='79'>Jamaican</option><option value='80'>Japanese</option><option value='81'>Jordanian</option><option value='82'>Kazakh</option><option value='83'>Kenyan</option><option value='84'>Kuwaiti</option><option value='85'>Laotian</option><option value='86'>Latvian</option><option value='87'>Lebanese</option><option value='88'>Liberian</option><option value='89'>Libyan</option><option value='91'>Lithuanian</option><option value='93'>Macedonian</option><option value='94'>Malagasy or Madagascan</option><option value='95'>Malawian</option><option value='96'>Malaysian</option><option value='97'>Maldivian</option><option value='98'>Malian</option><option value='99'>Maltese</option><option value='100'>Mauritanian</option><option value='101'>Mauritian</option><option value='102'>Mexican</option><option value='103'>Moldovan</option><option value='104'>Monégasque or Monacan</option><option value='105'>Mongolian</option><option value='106'>Montenegrin</option><option value='107'>Moroccan</option><option value='108'>Mozambican</option><option value='110'>Namibian</option><option value='111'>Nepalese</option><option value='113'>New Zealander</option><option value='114'>Nicaraguan</option><option value='116'>Nigerian</option><option value='115'>Nigerien</option><option value='117'>North Korean</option><option value='118'>Norwegian</option><option value='119'>Omani</option><option value='120'>Pakistani</option><option value='121'>Panamanian</option><option value='122'>Papua New Guinean or Guinean</option><option value='123'>Paraguayan</option><option value='124'>Peruvian</option><option value='125'>Philippine</option><option value='126'>Polish</option><option value='127'>Portuguese</option><option value='128'>Qatari</option><option value='129'>Romanian</option><option value='130'>Russian</option><option value='131'>Rwandese</option><option value='50'>Salvadorean</option><option value='184'>Saotome</option><option value='132'>Saudi Arabian or Saudi</option><option value='133'>Scottish</option><option value='134'>Senegalese</option><option value='135'>Serb or Serbian</option><option value='136'>Seychellois</option><option value='137'>Sierra Leonian</option><option value='138'>Singaporean</option><option value='139'>Slovak</option><option value='140'>Slovene or Slovenian</option><option value='142'>Somali</option><option value='143'>South African</option><option value='144'>South Korean</option><option value='180'>South Sudanese</option><option value='145'>Spanish</option><option value='146'>Sri Lankan</option><option value='147'>Sudanese</option><option value='148'>Surinamese</option><option value='149'>Swazi</option><option value='150'>Swedish</option><option value='151'>Swiss</option><option value='152'>Syrian</option><option value='153'>Taiwanese</option><option value='154'>Tajik or Tadjik</option><option value='155'>Tanzanian</option><option value='156'>Thai</option><option value='157'>Togolese</option><option value='158'>Trinidadian/Tobagan/Tobagonian</option><option value='159'>Tunisian</option><option value='160'>Turkish</option><option value='161'>Turkmen or Turkoman</option><option value='162'>Tuvaluan</option><option value='163'>Ugandan</option><option value='164'>Ukrainian</option><option value='168'>Uruguayan</option><option value='169'>Uzbek</option><option value='170'>Vanuatuan</option><option value='171'>Venezuelan</option><option value='172'>Vietnamese</option><option value='173'>Welsh</option><option value='174'>Western Samoan</option><option value='175'>Yemeni</option><option value='176'>Yugoslav</option><option value='178'>Zambian</option><option value='179'>Zimbabwean</option>                            </select>
+                           </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-lg-3 col-form-label form-control-label">National ID / Passport</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="text" value="" name="nid" placeholder="National ID" id="nid">
+                           </div>
+                         </div>
+                         <div class="form-group row" style="display:none;">
+                           <label class="col-lg-3 col-form-label form-control-label">Passport ID</label>
+                           <div class="col-lg-9">
+                             <input class="form-control required" type="text" value="none" name="passport" placeholder="Passport ID">
+                           </div>
+                         </div>
+                     </div>
+                   </div><!-- /form user info -->
+                 </div>
+                 <div class="row" style="padding: 10px">
+                   <div class="form-group">
+                     <div class="col-lg-12">
+                       <button class="btn btn-primary btn-click" data-next="strategy" type="button">Next &rarr;</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              </div>
+            </div>
+</section>section
+</body>
+</html>
