@@ -1,0 +1,19 @@
+body {
+    background-image: url(./geek.jpg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+}
+h1 {
+    color: goldenrod;
+}
+#message {
+    font-style: italic;
+}
+button {
+    background: goldenrod;
+    color: #016f32;
+    width: 150px;
+}
