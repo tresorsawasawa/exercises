@@ -1,3 +1,1 @@
  Everyday exercises and Prectces
- 
-
