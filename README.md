@@ -1,2 +1,2 @@
- Everyday exercises and 
-
+ Everyday exercises and practices
+ 
